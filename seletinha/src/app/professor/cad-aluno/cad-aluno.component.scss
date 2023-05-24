@@ -1,0 +1,149 @@
+.aling{
+  position: absolute;
+  top:18%;
+  left: 15%;
+}
+
+.example-full-width {
+  width: 300px;
+}
+
+.editMat{
+  width: 500px;
+}
+
+.editMatIdad{
+  width: 398px;
+}
+
+.editMatId{
+  width: 250px;
+}
+
+.editMatSer{
+  width: 375px;
+}
+
+.editMatTur{
+  width: 425px;
+}
+
+
+.div1{
+  font-size: 29px;
+  color: #fff;
+  left: 129px;
+  position: relative;
+}
+
+.div2{
+  top: 26%;
+  position: fixed;
+}
+
+.div3{
+  position: fixed;
+  top: 71%;
+  display: flex;
+}
+
+.divbtn1{
+  width: 132px;
+  height: 40px;
+  border-radius: 19px;
+  background-color: #626262;
+  color: #fff;
+}
+
+.divbtn2{
+  width: 132px;
+  height: 40px;
+  border-radius: 19px;
+  background-color: #626262;
+  color: #fff;
+}
+
+
+::ng-deep .mat-form-field.mat-focused {
+  .mat-form-field-label {
+      color: #b4b4b4;
+  }
+  .mat-form-field-ripple {
+      background-color: #b4b4b4;
+  }
+  .mat-form-field-outline-required-marker {
+      color: #b4b4b4;
+  }
+  .mat-input-element {
+      color: #b4b4b4;
+  }
+}
+
+::ng-deep {
+  .mat-form-field-appearance-outline .mat-form-field-outline {
+     color: white;
+  }
+  mat-form-field {
+     .mat-hint, input, ::placeholder, .mat-form-field-label {
+        color: white !important;
+     }
+
+     .mat-form-field-ripple, .mat-form-field-outline-required-marker,  .mat-input-element{
+      color: white !important;
+     }
+
+     .mat-form-field.mat-focused{
+      color: white !important;
+    }
+
+    .mat-focused{
+      color: white !important;
+    }
+  }
+
+  .mat-form-field.mat-focused{
+    color: white !important;
+  }
+
+}
+
+
+::ng-deep .mdc-text-field--outlined:not(.mdc-text-field--disabled).mdc-text-field--focused .mdc-notched-outline__leading,
+::ng-deep .mdc-text-field--outlined:not(.mdc-text-field--disabled).mdc-text-field--focused .mdc-notched-outline__notch,
+::ng-deep .mdc-text-field--outlined:not(.mdc-text-field--disabled).mdc-text-field--focused .mdc-notched-outline__trailing{
+  border-color: white !important;
+  border-width: 2px;
+}
+
+::ng-deep body {
+  background-color:#333333;
+  opacity: 95%;
+}
+
+
+::ng-deep .mat-form-field-type-mat-native-select .mat-form-field-infix::after {
+  color: white !important;
+}
+
+::ng-deep .mat-input-element:disabled,
+.mat-form-field-type-mat-native-select.mat-form-field-disabled .mat-form-field-infix::after {
+  color: white !important;
+}
+
+::ng-deep .mat-input-element {
+  caret-color:  white !important;
+
+}
+
+::ng-deep .mat-form-field.mat-accent .mat-input-element {
+  caret-color:  white !important;
+}
+
+::ng-deep .mat-form-field.mat-warn .mat-input-element,
+.mat-form-field-invalid .mat-input-element {
+  caret-color: white !important;
+}
+
+::ng-deep .mat-form-field-type-mat-native-select.mat-form-field-invalid .mat-form-field-infix::after {
+  color:  white !important;
+}
