@@ -20,6 +20,7 @@ import {MatAutocompleteModule} from '@angular/material/autocomplete';
 import {MatChipsModule} from '@angular/material/chips';
 import { CadProfessorComponent } from './cad-professor/cad-professor.component';
 import { HttpClientModule } from '@angular/common/http';
+import {MatTabsModule} from '@angular/material/tabs';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,7 @@ import { HttpClientModule } from '@angular/common/http';
     MenuComponent,
     CadProfessorComponent
    ],
-  exports:[MenuComponent],
+  exports:[],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -46,7 +47,8 @@ import { HttpClientModule } from '@angular/common/http';
     MatAutocompleteModule,
     ReactiveFormsModule,
     MatChipsModule,
-    HttpClientModule
+    HttpClientModule,
+    MatTabsModule
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [],

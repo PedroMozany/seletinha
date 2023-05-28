@@ -1,57 +1,72 @@
+<app-menu [tela]="tela" (btnMenu)="trocaTela($event)"></app-menu>
 <div class="aling">
   <div class="div1">
     <span>Cadastro de Aluno</span>
   </div>
 
+  <div class="line"></div>
+
   <div class="div2">
-    <div>
-      <mat-form-field  class="editMat" appearance="outline">
-        <mat-label>Nome</mat-label>
-        <input matInput [(ngModel)]="name" >
-      </mat-form-field>
-    </div>
-    <div>
-      <mat-form-field class="editMatId" appearance="outline">
-        <mat-label>Id Aluno</mat-label>
-        <input matInput [(ngModel)]="idAluno" >
-      </mat-form-field>
-    </div>
-    <div>
-      <mat-form-field  class="editMatSer" appearance="outline">
-      <mat-label>Serie</mat-label>
-      <mat-select (selectionChange)="selectSerie($event)">
-        <mat-option value="1">3º Ano</mat-option>
-        <mat-option value="2">2º Ano</mat-option>
-        <mat-option value="3">1º Ano</mat-option>
-        <mat-option value="4">9º Ano</mat-option>
-        <mat-option value="5">8º Ano</mat-option>
-        <mat-option value="6">7º Ano</mat-option>
-        <mat-option value="7">6º Ano</mat-option>
-      </mat-select>
-    </mat-form-field>
+    <div  style="display: flex;">
+      <div>
+        <mat-form-field  class="editMat" appearance="outline">
+          <mat-label>Nome</mat-label>
+          <input matInput [(ngModel)]="name" >
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field class="editMatId" appearance="outline">
+          <mat-label>Id Aluno</mat-label>
+          <input matInput [(ngModel)]="idAluno" >
+        </mat-form-field>
+      </div>
     </div>
 
-    <div>
-     <mat-form-field  class="editMatTur" appearance="outline">
-      <mat-label>Turma</mat-label>
-      <mat-select (selectionChange)="selectTurma($event)">
-        <mat-option value="1">A</mat-option>
-        <mat-option value="2">B</mat-option>
-        <mat-option value="3">C</mat-option>
-      </mat-select>
-     </mat-form-field>
+    <div style="display: flex;">
+      <div>
+        <mat-form-field  class="editMatSer" appearance="outline">
+          <mat-label>Serie</mat-label>
+          <mat-select (selectionChange)="selectSerie($event)">
+            <mat-option value="1">3º Ano</mat-option>
+            <mat-option value="2">2º Ano</mat-option>
+            <mat-option value="3">1º Ano</mat-option>
+            <mat-option value="4">9º Ano</mat-option>
+            <mat-option value="5">8º Ano</mat-option>
+            <mat-option value="6">7º Ano</mat-option>
+            <mat-option value="7">6º Ano</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+
+      <div>
+       <mat-form-field  class="editMatTur" appearance="outline">
+        <mat-label>Turma</mat-label>
+        <mat-select (selectionChange)="selectTurma($event)">
+          <mat-option value="1">A</mat-option>
+          <mat-option value="2">B</mat-option>
+          <mat-option value="3">C</mat-option>
+        </mat-select>
+       </mat-form-field>
+      </div>
     </div>
+
   </div>
 
   <div class="div3">
-    <div>
+    <div style="position: relative;right: 21%;">
       <button mat-flat-button  (click)="cancelar()"  class="divbtn2">Cancelar</button>
     </div>
 
-    <div style="left: 27%;position: fixed;">
+    <div>
       <button mat-flat-button (click)="cadastro()"  class="divbtn1">Salvar</button>
     </div>
   </div>
 
 
 </div>
+
+
+
+<footer class="main-footer">
+  <strong>Copyright &copy; 2023-2023 <a>Seletinha</a></strong> Todos os direitos reservados.
+</footer>

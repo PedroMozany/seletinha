@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-cad-aluno',
@@ -12,8 +13,10 @@ export class CadAlunoComponent implements OnInit {
   idAluno!: number;
   serie!: number;
   turma!: number;
+  tela = 'cadastroAluno';
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient,
+    private route: Router) { }
 
   cadastro(){
     if(this.name != undefined || this.idAluno != undefined || this.serie != undefined || this.turma != undefined ){
@@ -39,6 +42,17 @@ export class CadAlunoComponent implements OnInit {
 
   selectTurma(e: any){
     this.turma = e.value;
+  }
+
+  trocaTela(e:any){
+    console.log(e)
+    if(this.route.url != "/cadastroAluno"){
+      this.route.navigate(['/cadastroAluno']);
+    }
+  }
+
+  telaCad(e:any){
+    console.log(e)
   }
 
   ngOnInit(): void {

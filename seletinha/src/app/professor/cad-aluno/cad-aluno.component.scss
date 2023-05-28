@@ -1,7 +1,16 @@
+
 .aling{
   position: absolute;
   top:18%;
   left: 15%;
+}
+
+.main-footer {
+  top: 92%;
+  position: fixed;
+  left: 13%;
+  color: #869099;
+  padding: 1rem;
 }
 
 .example-full-width {
@@ -9,7 +18,21 @@
 }
 
 .editMat{
-  width: 500px;
+  width: 426px;
+  height: 27px;
+  border-radius: 60px;
+  padding: 0px 0px 0px 11px;
+  font-size: 18px;
+  top: 13px;
+  position: relative;
+  border-color: #777777;
+}
+
+.editSpan1{
+  font-size: 21px;
+    color: #777777;
+    left: 6px;
+    position: relative;
 }
 
 .editMatIdad{
@@ -18,40 +41,53 @@
 
 .editMatId{
   width: 250px;
+  top: 20%;
+  left: 26%;
 }
 
 .editMatSer{
   width: 375px;
+  top: 39%;
+  left: 3%;
 }
 
 .editMatTur{
   width: 425px;
+  left: 27%;
+  top: 39%;
+}
+
+.line{
+  width: 305%;
+  background-color: #777777;
+  height: 2px;
+  top: 12px;
+  position: relative;
 }
 
 
 .div1{
-  font-size: 29px;
-  color: #fff;
-  left: 129px;
-  position: relative;
+  font-size: 40px;
+  color: #777777;
 }
 
 .div2{
-  top: 26%;
+  top: 30%;
   position: fixed;
 }
 
 .div3{
   position: fixed;
-  top: 71%;
+  top: 61%;
   display: flex;
+  left: 53%;
 }
 
 .divbtn1{
   width: 132px;
   height: 40px;
   border-radius: 19px;
-  background-color: #626262;
+  background-color:#1c4819d9;
   color: #fff;
 }
 
@@ -59,91 +95,24 @@
   width: 132px;
   height: 40px;
   border-radius: 19px;
-  background-color: #626262;
+  background-color: #0a3d07;
   color: #fff;
 }
 
-
-::ng-deep .mat-form-field.mat-focused {
-  .mat-form-field-label {
-      color: #b4b4b4;
-  }
-  .mat-form-field-ripple {
-      background-color: #b4b4b4;
-  }
-  .mat-form-field-outline-required-marker {
-      color: #b4b4b4;
-  }
-  .mat-input-element {
-      color: #b4b4b4;
-  }
-}
-
-::ng-deep {
-  .mat-form-field-appearance-outline .mat-form-field-outline {
-     color: white;
-  }
-  mat-form-field {
-     .mat-hint, input, ::placeholder, .mat-form-field-label {
-        color: white !important;
-     }
-
-     .mat-form-field-ripple, .mat-form-field-outline-required-marker,  .mat-input-element{
-      color: white !important;
-     }
-
-     .mat-form-field.mat-focused{
-      color: white !important;
-    }
-
-    .mat-focused{
-      color: white !important;
-    }
-  }
-
-  .mat-form-field.mat-focused{
-    color: white !important;
-  }
-
-}
-
-
-::ng-deep .mdc-text-field--outlined:not(.mdc-text-field--disabled).mdc-text-field--focused .mdc-notched-outline__leading,
-::ng-deep .mdc-text-field--outlined:not(.mdc-text-field--disabled).mdc-text-field--focused .mdc-notched-outline__notch,
-::ng-deep .mdc-text-field--outlined:not(.mdc-text-field--disabled).mdc-text-field--focused .mdc-notched-outline__trailing{
-  border-color: white !important;
-  border-width: 2px;
-}
-
 ::ng-deep body {
-  background-color:#333333;
+  background-color:#fff;
   opacity: 95%;
 }
 
 
-::ng-deep .mat-form-field-type-mat-native-select .mat-form-field-infix::after {
-  color: white !important;
+
+::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
+  color: #033500;
+  border-color: #033500;
 }
 
-::ng-deep .mat-input-element:disabled,
-.mat-form-field-type-mat-native-select.mat-form-field-disabled .mat-form-field-infix::after {
-  color: white !important;
-}
-
-::ng-deep .mat-input-element {
-  caret-color:  white !important;
-
-}
-
-::ng-deep .mat-form-field.mat-accent .mat-input-element {
-  caret-color:  white !important;
-}
-
-::ng-deep .mat-form-field.mat-warn .mat-input-element,
-.mat-form-field-invalid .mat-input-element {
-  caret-color: white !important;
-}
-
-::ng-deep .mat-form-field-type-mat-native-select.mat-form-field-invalid .mat-form-field-infix::after {
-  color:  white !important;
+::ng-deep .mat-form-field-appearance-outline.mat-focused .mat-form-field-outline-thick,
+::ng-deep .mat-form-field-appearance-outline.mat-focused .mat-form-field-label {
+  border-color: rgb(22, 22, 47);
+  color: rgb(10, 22, 10);
 }

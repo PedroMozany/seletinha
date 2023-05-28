@@ -1,7 +1,4 @@
-::ng-deep body {
-  background-color:#333333;
-  opacity: 95%;
-}
+
 
 .div1{
   top: 15%;
@@ -9,7 +6,7 @@
   width: 381px;
   height: 564px;
   background-color: #5e5e5e75;
-  left: 40%;
+  left: 70%;
   border-radius: 49px;
 }
 
@@ -98,8 +95,9 @@
 }
 
 ::ng-deep body {
-  background-color:#333333;
-  opacity: 95%;
+  background-image: url('../imagens/image01.png');
+  background-repeat: no-repeat;
+  background-color: #2867084a;
 }
 
 

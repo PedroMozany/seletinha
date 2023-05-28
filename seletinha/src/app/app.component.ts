@@ -9,6 +9,7 @@ import { Router } from '@angular/router';
 export class AppComponent {
   title = 'seletinha';
   exibeMenu = true;
+  tela = '';
 
   constructor(private route: Router){ }
 
@@ -17,6 +18,18 @@ export class AppComponent {
       this.exibeMenu = false;
     } else{
       this.exibeMenu = true;
+    }
+
+    if(this.route.url === "/cadastroAluno"){
+      this.tela = 'cadastroAluno';
+    }
+
+    if(this.route.url === "/cadastroAtividade"){
+      this.tela = 'cadastroAtividade';
+    }
+
+    if(this.route.url === "/cadastroProfessor"){
+      this.tela = 'cadastroProfessor';
     }
   }
 }
