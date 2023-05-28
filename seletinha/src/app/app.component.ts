@@ -9,27 +9,14 @@ import { Router } from '@angular/router';
 export class AppComponent {
   title = 'seletinha';
   exibeMenu = true;
-  tela = '';
 
   constructor(private route: Router){ }
 
   public onRouterMenuActivate(event: any){
-    if(this.route.url === "/login"){
+    if(this.route.url === "/login" || this.route.url === "/cadastroProfessor" ){
       this.exibeMenu = false;
     } else{
       this.exibeMenu = true;
-    }
-
-    if(this.route.url === "/cadastroAluno"){
-      this.tela = 'cadastroAluno';
-    }
-
-    if(this.route.url === "/cadastroAtividade"){
-      this.tela = 'cadastroAtividade';
-    }
-
-    if(this.route.url === "/cadastroProfessor"){
-      this.tela = 'cadastroProfessor';
     }
   }
 }
