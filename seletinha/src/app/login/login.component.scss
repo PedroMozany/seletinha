@@ -1,24 +1,24 @@
 
 
 .div1{
-  top: 31%;
+  top: 29%;
   position: fixed;
   width: 381px;
-  height: 317px;
+  height: 370px;
   background-color: #909675d6;
   left: 39%;
   border-radius: 49px;
 }
 
 .div2{
-  top: 27%;
+  top: 38%;
   position: relative;
   left: 14%;
 }
 
 .div3{
   position: relative;
-  top: 28%;
+  top: 38%;
   left: 14%;
 }
 
@@ -28,7 +28,7 @@
 
 .div4{
   position: relative;
-  top: 24%;
+  top: 37%;
   left: 34%;
 }
 
@@ -40,7 +40,17 @@
   color: #fff;
 }
 
+.logo{
+  background-image: url('../imagens/logo2.png');
+  background-repeat: no-repeat;
+  background-size: 71%;
+  width: 171px;
+  height: 177px;
+  left: 32%;
+  position: absolute;
+  top: 3%;
 
+}
 
 ::ng-deep body {
   background-image: url('../imagens/img2.jpg');
