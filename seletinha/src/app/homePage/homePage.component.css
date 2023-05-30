@@ -5,58 +5,87 @@
 }
 
 .div1{
+  top: 16%;
+  position: fixed;
+  width: 409px;
+  height: 574px;
+  background-color: #909675d6;
+  left: 60%;
+  border-radius: 49px;
+}
+
+.div7{
   top: 26%;
   position: fixed;
-  width: 712px;
-  height: 370px;
-  background-color: #909675d6;
-  left: 31%;
+  width: 746px;
+  left: 7%;
   border-radius: 49px;
 }
 
 .divbtn1{
-  width: 132px;
+  width: 215px;
   height: 40px;
   border-radius: 19px;
   background-color: #81875e;
   color: #fff;
+  font-size: 18px;
 }
 
 .div2{
-  font-size: 16px;
+  font-size: 22px;
   top: 31%;
   position: relative;
   left: 2%;
-  color: #fff;
+  color: #4f5f05 !important;
 }
 
 .logo{
   background-image: url('../imagens/logo2.png');
   background-repeat: no-repeat;
   background-size: 71%;
-  width: 138px;
+  width: 185px;
   height: 177px;
-  left: 39%;
+  left: 34%;
   position: absolute;
-  top: 2%;
+  top: 8%;
+}
+
+.lixeira{
+  background-image: url('../imagens/lixeira.png');
+  background-repeat: no-repeat;
+  background-size: 71%;
+  width: 685px;
+  height: 177px;
+  left: 10%;
+  position: absolute;
+  margin-top: 7%;
 }
 
 .div3{
   position: relative;
-  top: 34%;
-  left: 2%;
+  top: 43%;
+  left: 23%;
   color: #fff;
-  font-size: 16px;
+  font-size: 32px;
+  font-weight: bold;
 }
 
 .div4{
   position: relative;
-  display: flex;
-  top: 44%;
-  left: 26%;
+  top: 58%;
+  left: 23%;
 }
 
 .ajustBtn{
-  left: 5%;
   position: relative;
+  margin-top: 7%;
+}
+
+.line{
+  width: 64%;
+   background-color: #5f7207;
+  height: 4px;
+  top: -17px;
+  position: relative;
+  left: -18px;
 }

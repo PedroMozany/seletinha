@@ -22,9 +22,10 @@ import { CadProfessorComponent } from './cad-professor/cad-professor.component';
 import { HttpClientModule } from '@angular/common/http';
 import {MatTabsModule} from '@angular/material/tabs';
 import { HomePageComponent } from './homePage/homePage.component';
+import { LoginAlunoComponent } from './loginAluno/loginAluno.component';
 
 @NgModule({
-  declarations: [
+  declarations: [	
     AppComponent,
     LoginComponent,
     CadAlunoComponent,
@@ -32,7 +33,8 @@ import { HomePageComponent } from './homePage/homePage.component';
     HomeComponent,
     MenuComponent,
     CadProfessorComponent,
-    HomePageComponent
+    HomePageComponent,
+      LoginAlunoComponent
    ],
   exports:[],
   imports: [
