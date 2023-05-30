@@ -5,10 +5,11 @@ import { CadAlunoComponent } from './professor/cad-aluno/cad-aluno.component';
 import { CadAtividadeComponent } from './professor/cad-atividade/cad-atividade.component';
 import { LoginComponent } from './login/login.component';
 import { CadProfessorComponent } from './cad-professor/cad-professor.component';
+import { HomePageComponent } from './homePage/homePage.component';
 
 const routes: Routes = [{
   path: '',
-  redirectTo: 'login',
+  redirectTo: 'homepage',
   pathMatch: "full"
 },
 {
@@ -28,8 +29,11 @@ const routes: Routes = [{
   path: 'cadastroProfessor',
   component: CadProfessorComponent
 },{
+  path: 'homepage',
+  component: HomePageComponent
+},{
   path: '**',
-  redirectTo: '/login'
+  redirectTo: '/homepage'
 }];
 
 @NgModule({

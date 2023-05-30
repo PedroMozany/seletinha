@@ -1,0 +1,62 @@
+::ng-deep body {
+  background-image: url('../imagens/img2.jpg');
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.div1{
+  top: 26%;
+  position: fixed;
+  width: 712px;
+  height: 370px;
+  background-color: #909675d6;
+  left: 31%;
+  border-radius: 49px;
+}
+
+.divbtn1{
+  width: 132px;
+  height: 40px;
+  border-radius: 19px;
+  background-color: #81875e;
+  color: #fff;
+}
+
+.div2{
+  font-size: 16px;
+  top: 31%;
+  position: relative;
+  left: 2%;
+  color: #fff;
+}
+
+.logo{
+  background-image: url('../imagens/logo2.png');
+  background-repeat: no-repeat;
+  background-size: 71%;
+  width: 138px;
+  height: 177px;
+  left: 39%;
+  position: absolute;
+  top: 2%;
+}
+
+.div3{
+  position: relative;
+  top: 34%;
+  left: 2%;
+  color: #fff;
+  font-size: 16px;
+}
+
+.div4{
+  position: relative;
+  display: flex;
+  top: 44%;
+  left: 26%;
+}
+
+.ajustBtn{
+  left: 5%;
+  position: relative;
+}

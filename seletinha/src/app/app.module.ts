@@ -21,6 +21,7 @@ import {MatChipsModule} from '@angular/material/chips';
 import { CadProfessorComponent } from './cad-professor/cad-professor.component';
 import { HttpClientModule } from '@angular/common/http';
 import {MatTabsModule} from '@angular/material/tabs';
+import { HomePageComponent } from './homePage/homePage.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import {MatTabsModule} from '@angular/material/tabs';
     CadAtividadeComponent,
     HomeComponent,
     MenuComponent,
-    CadProfessorComponent
+    CadProfessorComponent,
+    HomePageComponent
    ],
   exports:[],
   imports: [
