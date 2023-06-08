@@ -13,7 +13,7 @@ export class AppComponent {
   constructor(private route: Router){ }
 
   public onRouterMenuActivate(event: any){
-    if(this.route.url === "/login" || this.route.url === "/cadastroProfessor" || this.route.url === "/homepage" ){
+    if(this.route.url === "/login" || this.route.url === "/cadastroProfessor" || this.route.url === "/homepage" || this.route.url =='/loginAluno' ){
       this.exibeMenu = false;
     } else{
       this.exibeMenu = true;
