@@ -31,7 +31,7 @@ export class CadProfessorComponent implements OnInit {
 
   cadastro(){
     if(this.nome != undefined || this.turma != undefined || this.idprofessor != undefined || this.senha != undefined ){
-      const url = 'https://localhost:8080/api/teacher';
+      const url = '/teacher';
       const data = { name: this.nome,email: this.emailFormControl , password:  this.senha, team: this.turma, registry: this.idprofessor};
       this.http.post(url,data).subscribe((e) => {
         console.log(e);
