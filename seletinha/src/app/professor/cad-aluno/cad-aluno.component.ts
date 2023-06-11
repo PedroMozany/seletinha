@@ -20,7 +20,7 @@ export class CadAlunoComponent implements OnInit {
 
   cadastro(){
     if(this.name != undefined || this.idAluno != undefined || this.serie != undefined || this.turma != undefined ){
-      const url = '/student';
+      const url = '/api/student';
       const data = { name: this.name, series:  this.serie, registry: this.idAluno, team: this.turma};
       this.http.post(url,data).subscribe((e) => {
         console.log(e);
