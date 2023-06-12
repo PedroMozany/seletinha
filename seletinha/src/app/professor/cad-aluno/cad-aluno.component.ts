@@ -21,8 +21,12 @@ export class CadAlunoComponent implements OnInit {
   cadastro(){
     if(this.name != undefined || this.idAluno != undefined || this.serie != undefined || this.turma != undefined ){
       const url = 'http://localhost:8080/api/student';
-      const data = { name: this.name, series:  this.serie, registry: this.idAluno, team: this.turma};
-      this.http.post(url,data).subscribe((e) => {
+      const formData = new FormData();
+      formData.append('name',  this.name);
+      formData.append('series',  `${this.serie}`);
+      formData.append('registry',  `${this.idAluno}`);
+      formData.append('team',  `${this.turma}`);
+      this.http.post(url,formData).subscribe((e) => {
         console.log(e);
         return;
       });
