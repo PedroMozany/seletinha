@@ -4,6 +4,7 @@ package com.system.seletinha.endpoint.service;
 import com.system.seletinha.config.JwtService;
 import com.system.seletinha.models.*;
 import com.system.seletinha.repository.TeacherRepository;
+import jakarta.servlet.http.HttpServletRequest;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -21,13 +22,13 @@ public class AuthenticationService {
     private final JwtService jwtService;
     private final AuthenticationManager authenticationManager;
 
-    public AuthenticationResponse register(RegisterRequest request) {
+    public AuthenticationResponse register(final HttpServletRequest request) {
         var teacher = TeachersModel.builder()
-                .registry(request.getRegistry())
-                .name(request.getName())
-                .team(request.getTeam())
-                .email(request.getEmail())
-                .password(passwordEncoder.encode(request.getPassword()))
+                .registry(Integer.valueOf(request.getParameter("registry")))
+                .name(request.getParameter("name"))
+                .team(Integer.valueOf(request.getParameter("team")))
+                .email(request.getParameter("email"))
+                .password(passwordEncoder.encode(request.getParameter("password")))
                 .role(Role.USER)
                 .build();
         repository.save(teacher);
@@ -38,9 +39,9 @@ public class AuthenticationService {
     }
 
 
-    public AuthenticationResponse authenticate(AuthenticationRegisterRequest request) {
-        authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(request.getEmail(), request.getPassword()));
-        var user = repository.findByEmail(request.getEmail()).orElseThrow();
+    public AuthenticationResponse authenticate(final HttpServletRequest request) {
+        authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(request.getParameter("email"), request.getParameter("password")));
+        var user = repository.findByEmail(request.getParameter("email")).orElseThrow();
         var jwtToken = jwtService.generateToken(user);
         return AuthenticationResponse.builder()
                 .token(jwtToken)
