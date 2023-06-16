@@ -23,9 +23,10 @@ import { HttpClientModule } from '@angular/common/http';
 import {MatTabsModule} from '@angular/material/tabs';
 import { HomePageComponent } from './homePage/homePage.component';
 import { LoginAlunoComponent } from './loginAluno/loginAluno.component';
+import { AlunoComponent } from './aluno/aluno.component';
 
 @NgModule({
-  declarations: [	
+  declarations: [
     AppComponent,
     LoginComponent,
     CadAlunoComponent,
@@ -34,7 +35,8 @@ import { LoginAlunoComponent } from './loginAluno/loginAluno.component';
     MenuComponent,
     CadProfessorComponent,
     HomePageComponent,
-      LoginAlunoComponent
+    LoginAlunoComponent,
+    AlunoComponent
    ],
   exports:[],
   imports: [

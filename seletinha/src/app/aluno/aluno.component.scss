@@ -1,0 +1,91 @@
+::ng-deep body {
+  background-color:#e8dfcd !important;
+  opacity: 95%;
+}
+
+.div1{
+  position: relative;
+  margin-top: 7%;
+  margin-left: 5%;
+}
+
+.container{
+  background-image: url('./imagens/fundo.png');
+  background-size: cover;
+  background-position: center;
+  width: 934px;
+  height: 600px;
+  border-radius: 20px;
+}
+
+.lixeira1{
+  background-image: url('./imagens/lixeira1.png');
+  background-size: cover;
+  background-position: center;
+  width: 150px;
+  height:232px;
+}
+
+.lixeira2{
+  background-image: url('./imagens/lixeira2.png');
+  background-size: cover;
+  background-position: center;
+  width: 150px;
+  height: 232px;
+}
+
+.lixeira3{
+  background-image: url('./imagens/lixeira3.png');
+  background-size: cover;
+  background-position: center;
+  width: 150px;
+  height: 232px;
+}
+
+.lixeira4{
+  background-image: url('./imagens/lixeira4.png');
+  background-size: cover;
+  background-position: center;
+  width: 150px;
+  height:232px;
+}
+
+.lixeira5{
+  background-image: url('./imagens/lixeira5.png');
+  background-size: cover;
+  background-position: center;
+  width: 150px;
+  height: 232px;
+}
+
+.lixeira6{
+  background-image: url('./imagens/lixeira6.png');
+  background-size: cover;
+  background-position: center;
+  width: 150px;
+  height: 232px;
+}
+
+.ajustDiv{
+  display: flex;
+  position: relative;
+  top:61%;
+}
+
+.bntPlay{
+  width: 99px;
+  height: 67px;
+  background-color: #426618;
+  border-radius: 20px;
+}
+
+.play{
+  color: #fff !important;
+  font-size: 20px !important;
+}
+
+.divBtn{
+  top: 42%;
+  position: relative;
+  left: 45%;
+}
