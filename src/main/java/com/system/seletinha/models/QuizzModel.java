@@ -23,8 +23,8 @@ public class QuizzModel {
     private String b;
     private String c;
     private String d;
+    private String tipo;
     private String resposta;
     private String justificativa;
-
-
+    private String nivel;
 }
