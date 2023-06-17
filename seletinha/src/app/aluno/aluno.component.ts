@@ -10,8 +10,8 @@ export class AlunoComponent implements OnInit {
 
   tela = 'aluno';
   lixeira: boolean = false;
-  play: boolean = false;
-  jogo1: boolean = false;
+  play: boolean = true;
+  jogo1: boolean = true;
   constructor() { }
 
   ngOnInit(): void {

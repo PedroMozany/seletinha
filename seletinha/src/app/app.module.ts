@@ -24,6 +24,9 @@ import {MatTabsModule} from '@angular/material/tabs';
 import { HomePageComponent } from './homePage/homePage.component';
 import { LoginAlunoComponent } from './loginAluno/loginAluno.component';
 import { AlunoComponent } from './aluno/aluno.component';
+import {MatDialogModule} from '@angular/material/dialog';
+import { DialogModuleComponent } from './dialog-module/dialog-module.component';
+
 
 @NgModule({
   declarations: [
@@ -36,7 +39,8 @@ import { AlunoComponent } from './aluno/aluno.component';
     CadProfessorComponent,
     HomePageComponent,
     LoginAlunoComponent,
-    AlunoComponent
+    AlunoComponent,
+    DialogModuleComponent
    ],
   exports:[],
   imports: [
@@ -54,7 +58,8 @@ import { AlunoComponent } from './aluno/aluno.component';
     ReactiveFormsModule,
     MatChipsModule,
     HttpClientModule,
-    MatTabsModule
+    MatTabsModule,
+    MatDialogModule
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [],

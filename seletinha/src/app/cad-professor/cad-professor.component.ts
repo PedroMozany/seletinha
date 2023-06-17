@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroupDirective, NgForm,Validators } from '@angular/forms';
 import { ErrorStateMatcher } from '@angular/material/core';
 import { HttpClient } from '@angular/common/http';
+import { MatDialog } from '@angular/material/dialog';
+import { DialogModuleComponent } from '../dialog-module/dialog-module.component';
 
 export class MyErrorStateMatcher implements ErrorStateMatcher {
   isErrorState(control: FormControl | null, form: FormGroupDirective | NgForm | null): boolean {
@@ -25,17 +27,23 @@ export class CadProfessorComponent implements OnInit {
   nome!: string;
   turma!: number;
   idprofessor!: number;
+  disabledBtn: boolean = true;
 
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient,
+    public dialog: MatDialog) { }
 
   cadastro(){
     if(this.nome != undefined || this.turma != undefined || this.idprofessor != undefined || this.senha != undefined ){
-      const url = 'http://localhost:8080/api/teacher';
-      const data = { name: this.nome,email: this.emailFormControl , password:  this.senha, team: this.turma, registry: this.idprofessor};
-      this.http.post(url,data).subscribe((e) => {
-        console.log(e);
-        return;
+      const url = 'http://localhost:4200/api/auth/signup';
+      const formData = new FormData();
+      formData.append('name',  this.nome);
+      formData.append('email',  `${this.emailFormControl.value}`);
+      formData.append('password',  `${this.senha}`);
+      formData.append('team',  `${this.turma}`);
+      formData.append('registry',  `${this.idprofessor}`);
+      this.http.post(url,formData).subscribe((e:any) => {
+        this.openDialog(this.nome);
       });
       return;
     } else{
@@ -44,6 +52,18 @@ export class CadProfessorComponent implements OnInit {
   }
 
   ngOnInit(): void {
+  }
+
+  openDialog(e:any): void {
+    this.disabledBtn = false;
+    const dialogRef = this.dialog.open(DialogModuleComponent, {
+      width:'300px',
+      height:'300px',
+      data: e
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+    });
   }
 
 }
