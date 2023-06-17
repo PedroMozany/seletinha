@@ -1,25 +1,26 @@
 package com.system.seletinha.endpoint.service;
 
 import com.system.seletinha.models.QuizzModel;
+import com.system.seletinha.repository.QuizzRepository;
+import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
-import java.util.LinkedList;
 import java.util.List;
-import java.util.Random;
+import java.util.stream.Collectors;
 
+@Service
+@Slf4j
+@RequiredArgsConstructor(onConstructor = @__(@Autowired))
 public class QuizzService {
 
-    List<QuizzModel> list = new LinkedList<>();
+    private final QuizzRepository quizzRepository;
 
-    public int gerarQuestao(int quantities, String nivel) {
-        int id = 0;
+    public List<QuizzModel> questions(String nivel, String tipo, int amount) {
 
-
-        Random random = new Random();
-
-        for (int i = 0; i < quantities; i++) {
-            id = random.nextInt(0, 73);
-        }
-        return id;
+        quizzRepository.findByNivelAndTipo(nivel, tipo);
+        return quizzRepository.findByNivelAndTipo(nivel, tipo).stream().limit(amount).collect(Collectors.toList());
     }
 
 

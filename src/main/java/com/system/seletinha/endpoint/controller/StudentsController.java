@@ -23,9 +23,9 @@ public class StudentsController {
     @RequestMapping(value = "/student", method = RequestMethod.POST)
     public @ResponseBody ServiceModel createStudent(final HttpServletRequest request) {
         String name = request.getParameter("name");
-        int series = Integer.parseInt(request.getParameter("series"));
-        int registry = Integer.parseInt(request.getParameter("registry"));
-        int team = Integer.parseInt(request.getParameter("team"));
+        String series = request.getParameter("series");
+        String registry = request.getParameter("registry");
+        String team = request.getParameter("team");
 
         String resp = studentsService.create(new StudentModel(registry,name,series,team));
         return new ServiceModel(200, resp);

@@ -22,4 +22,10 @@ public class StudentModel {
     private int team;
 
 
+    public StudentModel(String registry, String name, String series, String team) {
+        this.registry = Integer.parseInt(registry);
+        this.name = name;
+        this.series = Integer.parseInt(series);
+        this.team = Integer.parseInt(team);
+    }
 }
