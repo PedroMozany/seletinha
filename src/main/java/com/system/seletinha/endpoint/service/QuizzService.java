@@ -18,7 +18,6 @@ public class QuizzService {
     private final QuizzRepository quizzRepository;
 
     public List<QuizzModel> questions(String nivel, String tipo, int amount) {
-
         quizzRepository.findByNivelAndTipo(nivel, tipo);
         return quizzRepository.findByNivelAndTipo(nivel, tipo).stream().limit(amount).collect(Collectors.toList());
     }
