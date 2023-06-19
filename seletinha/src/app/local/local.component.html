@@ -1,9 +1,18 @@
 <div class="aling">
+  <div class="divText">
+    <span>Locais de coleta seletiva</span>
+  </div>
+  <div class="line"></div>
+
   <div class="div1" *ngFor="let element of elements">
-    <div> {{ element.address }}</div>
+    <div>
+       <i class="fas fa-map-marker-alt play"></i> <span class="span1">Região:</span> <span class="span2">{{ element.zone }}</span>
+    </div>
+    <div class="div2">
+      <i class="fas fa-map-marked-alt play2"></i>  <div>{{ element.address }} </div>
+      <div class="ajustdiv1"> {{ element.neighborhood }}</div>
+    </div>
     <div> {{ element.disposalAssets }}</div>
-    <div> {{ element.neighborhood }}</div>
-    <div> {{ element.zone }}</div>
   </div>
 </div>
 

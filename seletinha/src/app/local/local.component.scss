@@ -1,20 +1,69 @@
 .aling{
   position: absolute;
-  top:18%;
+  top:8%;
   left: 15%;
 }
 
 .div1{
-  width: 576px;
-  height: 111px;
+  height: 77px;
+  padding: 0 20px;
+  font-size: 17px;
+  background: #fff;
+  border-radius: 7px;
+  justify-content: space-between;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
   display: inline-block;
-  background-color: #f9f9f9;
-  border-radius: 25px;
-  margin-left: 16px;
-  margin-top: 16px;
+  width: 833px;
+  margin-top: 1%;
+  position: relative;
 }
 
 ::ng-deep body {
   background-color:#e8dfcd !important;
   opacity: 95%;
+}
+
+.play{
+  color: #1a4514 !important;
+  font-size: 18px !important;
+  right: 1%;
+  position: relative;
+}
+
+.play2{
+  color: #1a4514 !important;
+  font-size: 18px !important;
+  right: 1%;
+  position: relative;
+}
+
+.span1{
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.span2{
+  position: relative;
+  left: 1%;
+  font-size: 15px;
+}
+
+.div2{
+  font-size: 15px;
+  display: flex;
+}
+
+.ajustdiv1{
+  left: 1%;
+  position: relative;
+}
+
+.divText{
+  font-size: 29px;
+  color: #777777;
+}
+.line{
+  width: 83%;
+  background-color: #777777;
+  height: 2px;
 }
