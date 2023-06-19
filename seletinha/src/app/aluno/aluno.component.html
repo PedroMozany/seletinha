@@ -6,37 +6,121 @@
   <div  class="container" *ngIf="jogo1">
 
     <div class="divBtn" *ngIf="play">
-      <button mat-button class="bntPlay" >
+      <button mat-button (click)="btnPlay()"  [ngClass]="{'pulsating': pulsate}" class="bntPlay" >
         <i class="fas fa-play play"></i>
       </button>
     </div>
 
+    <div *ngIf="frase">
+      <div class="divText">
+        <span> A qual lixeira esse objeto pertence ?</span>
+      </div>
+    </div>
+
+    <div *ngIf="fraseCorrect">
+      <div class="divTextCorrect">
+        <span> Resposta Correta</span>
+      </div>
+    </div>
+
+    <div *ngIf="fraseFaill">
+      <div class="divTextFaill">
+        <span> Resposta Errada</span>
+      </div>
+    </div>
+
     <div class="ajustDiv" *ngIf="lixeira">
-      <div class="lixeira1">
+      <div [class.disabled]="isDivDisabled"  (click)="atividade(1)" class="lixeira1">
 
       </div>
 
-      <div class="lixeira2">
+      <div [class.disabled]="isDivDisabled"  (click)="atividade(2)" class="lixeira2">
 
       </div>
 
-      <div class="lixeira3">
+      <div  [class.disabled]="isDivDisabled" (click)="atividade(3)" class="lixeira3">
 
       </div>
 
-      <div class="lixeira4">
+      <div [class.disabled]="isDivDisabled"  (click)="atividade(4)" class="lixeira4">
 
       </div>
 
-      <div class="lixeira5">
+      <div  [class.disabled]="isDivDisabled" (click)="atividade(5)" class="lixeira5">
 
       </div>
 
-      <div class="lixeira6">
+      <div [class.disabled]="isDivDisabled" (click)="atividade(6)" class="lixeira6">
 
       </div>
 
     </div>
+
+    <div class="ajustDiv2" *ngIf="atv">
+
+      <div class="atv1" [ngClass]="{'pulsating': pulsate}" *ngIf="atv1">
+
+      </div>
+
+      <div  class="atv2" *ngIf="atv2">
+
+      </div>
+
+      <div  class="atv3" *ngIf="atv3">
+
+      </div>
+
+      <div class="atv4" *ngIf="atv4">
+
+      </div>
+
+      <div class="atv5" *ngIf="atv5">
+
+      </div>
+
+      <div class="atv6" *ngIf="atv6">
+
+      </div>
+
+    </div>
+
+    <div *ngIf="fraseFinal">
+      <div class="divTextFinal">
+        <span>Fim do jogo</span>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="container2" *ngIf="jogo2">
+<!--
+    <div *ngIf="questions && questions.length > 0">
+      <ul>
+        <li *ngFor="let answer of questions[currentIndex].answers">
+          {{ answer }}
+        </li>
+      </ul>
+      <button (click)="nextQuestion()" *ngIf="!isLastQuestion()">Próxima Pergunta</button>
+    </div> -->
+
+    <mat-card>
+      <mat-card-content>
+        <h2 class="example-h2">Checkbox configuration</h2>
+
+        <mat-radio-group [(ngModel)]="labelPosition">
+          <mat-radio-button class="example-margin" value="a"></mat-radio-button>
+          <mat-radio-button class="example-margin" value="b"></mat-radio-button>
+          <mat-radio-button class="example-margin" value="c"></mat-radio-button>
+          <mat-radio-button class="example-margin" value="d"></mat-radio-button>
+        </mat-radio-group>
+        <div>
+          <button  (click)="nextQuestion()" *ngIf="!isLastQuestion()">Próxima Pergunta</button>
+        </div>
+
+
+      </mat-card-content>
+    </mat-card>
+
 
   </div>
 

@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import {COMMA, ENTER} from '@angular/cdk/keycodes';
 import {MatAutocompleteSelectedEvent} from '@angular/material/autocomplete';
 import {MatChipInputEvent} from '@angular/material/chips';
+import { HttpClient } from '@angular/common/http';
 
 
 @Component({
@@ -13,13 +14,35 @@ import {MatChipInputEvent} from '@angular/material/chips';
 })
 export class CadAtividadeComponent implements OnInit {
 
-  alunosSelect = new FormControl('');
-  allAlunos: string[] = ['Ana', 'Marcos', 'João', 'Marcelo', 'Marcela', 'Pedro', 'Lucas'];
-
-
-  constructor() { }
+  turma!: string;
+  serie!: string;
+  atividade!: string;
+  constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
+  }
+
+  cancel(){
+    this.turma = "";
+    this.serie = "";
+    this.atividade = "";
+  }
+
+  save(){
+
+    if(this.serie != undefined || this.turma != undefined || this.atividade != undefined ){
+      const url = 'http://localhost:8080/api/atividades';
+      const formData = new FormData();
+      formData.append('team',  this.turma);
+      formData.append('serie',  `${this.serie}`);
+      formData.append('nome',  `${this.atividade}`);
+      this.http.post(url,formData).subscribe((e:any) => {
+        return window.alert("Cadastro realizado com sucesso");
+      });
+      return;
+    } else{
+      return window.alert("Prencha todos os campos !!");
+    }
   }
 
 

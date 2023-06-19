@@ -52,5 +52,9 @@ export class MenuComponent implements OnInit {
     this.btnMenu.emit(e);
   }
 
+  telaAtivi(e:any){
+    this.btnMenu.emit(e);
+  }
+
 
 }

@@ -7,9 +7,16 @@
   <div class="div2">
     <div style="display: flex;">
       <div>
+        <mat-form-field  class="editMatIdad" appearance="outline">
+          <mat-label>Turma</mat-label>
+          <input matInput [(ngModel)]="turma" >
+        </mat-form-field>
+      </div>
+
+      <div>
         <mat-form-field  class="editMat" appearance="outline">
           <mat-label>Serie</mat-label>
-          <mat-select>
+          <mat-select  [(ngModel)]="serie">
            <mat-option value="1">3º Ano</mat-option>
            <mat-option value="2">2º Ano</mat-option>
            <mat-option value="3">1º Ano</mat-option>
@@ -20,36 +27,23 @@
           </mat-select>
         </mat-form-field>
       </div>
-      <div>
-        <mat-form-field  class="editMatIdad" appearance="outline">
-          <mat-label>Turma</mat-label>
-         <mat-select>
-          <mat-option value="1">A</mat-option>
-          <mat-option value="2">B</mat-option>
-          <mat-option value="3">C</mat-option>
-         </mat-select>
-        </mat-form-field>
-      </div>
+
     </div>
 
     <div style="display: flex;">
       <div>
-        <mat-form-field class="editMatId" appearance="outline">
+        <mat-form-field class="editMatId"  appearance="outline">
           <mat-label> Tipo de atividade</mat-label>
-          <mat-select>
-            <mat-option value="1">Sustentabilidade - Nivel Fácil</mat-option>
-            <mat-option value="2">Sustentabilidade - Nivel Médio</mat-option>
-            <mat-option value="3">Sustentabilidade - Nivel Difícil</mat-option>
+          <mat-select [(ngModel)]="atividade">
+            <mat-option value="Sustentabilidade - Nivel Fácil">Sustentabilidade - Nivel Fácil</mat-option>
+            <mat-option value="Sustentabilidade - Nivel Médio">Sustentabilidade - Nivel Médio</mat-option>
+            <mat-option value="Reciclagem - Nivel Fácil">Reciclagem - Nivel Fácil</mat-option>
+            <mat-option value="Reciclagem - Nivel Médio">Reciclagem - Nivel Médio</mat-option>
+            <mat-option value="Jogo">Jogo</mat-option>
           </mat-select>
         </mat-form-field>
       </div>
       <div>
-        <mat-form-field  class="editMatSer" appearance="outline">
-          <mat-label>Alunos</mat-label>
-          <mat-select [formControl]="alunosSelect" multiple>
-            <mat-option *ngFor="let alunos of allAlunos" [value]="alunos">{{alunos}}</mat-option>
-          </mat-select>
-      </mat-form-field>
       </div>
     </div>
 
@@ -59,11 +53,11 @@
 
   <div class="div3">
     <div style="position: relative;right: 21%;">
-      <button mat-flat-button   class="divbtn2">Cancelar</button>
+      <button mat-flat-button (click)="cancel()"   class="divbtn2">Cancelar</button>
     </div>
 
     <div>
-      <button mat-flat-button   class="divbtn1">Salvar</button>
+      <button mat-flat-button (click)="save()"   class="divbtn1">Salvar</button>
     </div>
   </div>
 

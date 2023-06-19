@@ -16,6 +16,7 @@
   width: 934px;
   height: 600px;
   border-radius: 20px;
+  overflow: hidden;
 }
 
 .lixeira1{
@@ -24,6 +25,13 @@
   background-position: center;
   width: 150px;
   height:232px;
+  transition: box-shadow 0.3s, transform 0.3s;
+  position: relative;
+  margin-top: -1%;
+}
+
+.lixeira1:hover {
+  transform: translate(10px, -10px);
 }
 
 .lixeira2{
@@ -32,6 +40,11 @@
   background-position: center;
   width: 150px;
   height: 232px;
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.lixeira2:hover {
+  transform: translate(10px, -10px);
 }
 
 .lixeira3{
@@ -40,6 +53,11 @@
   background-position: center;
   width: 150px;
   height: 232px;
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.lixeira3:hover {
+  transform: translate(10px, -10px);
 }
 
 .lixeira4{
@@ -48,6 +66,11 @@
   background-position: center;
   width: 150px;
   height:232px;
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.lixeira4:hover {
+  transform: translate(10px, -10px);
 }
 
 .lixeira5{
@@ -56,6 +79,11 @@
   background-position: center;
   width: 150px;
   height: 232px;
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.lixeira5:hover {
+  transform: translate(10px, -10px);
 }
 
 .lixeira6{
@@ -64,12 +92,17 @@
   background-position: center;
   width: 150px;
   height: 232px;
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.lixeira6:hover {
+  transform: translate(10px, -10px);
 }
 
 .ajustDiv{
   display: flex;
-  position: relative;
-  top:61%;
+  position: absolute;
+  top: 61%;
 }
 
 .bntPlay{
@@ -79,6 +112,21 @@
   border-radius: 20px;
 }
 
+.pulsating {
+  animation: pulsate 1s ease-in-out infinite;
+}
+
+@keyframes pulsate {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 .play{
   color: #fff !important;
   font-size: 20px !important;
@@ -88,4 +136,126 @@
   top: 42%;
   position: relative;
   left: 45%;
+}
+
+.atv1{
+  background-image: url('./imagens/atv1.png');
+  background-size: cover;
+  background-position: center;
+  width: 285px;
+  height: 187px;
+}
+
+.atv2{
+  background-image: url('./imagens/atv2.png');
+  background-size: cover;
+  background-position: center;
+  width: 285px;
+  height: 187px;
+}
+
+.atv3{
+  background-image: url('./imagens/atv3.png');
+  left: 6%;
+  background-size: cover;
+  background-position: center;
+  width: 184px;
+  height: 207px;
+  position: relative;
+}
+
+.atv4{
+  background-image: url('./imagens/atv4.png');
+  background-size: cover;
+  background-position: center;
+  width: 285px;
+  height: 187px;
+}
+
+.atv5{
+  background-image: url('./imagens/atv5.png');
+  background-size: cover;
+  background-position: center;
+  width: 285px;
+  height: 187px;
+}
+
+.atv6{
+  background-image: url('./imagens/atv6.png');
+  background-size: cover;
+  background-position: center;
+  width: 260px;
+  height: 269px;
+}
+
+.ajustDiv2{
+  position: relative;
+  left: 30%;
+  top: 12%;
+}
+
+.disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.divText{
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 303px;
+  height: 47px;
+  background-color: aliceblue;
+  border-radius: 24px;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 0px 15px;
+  left: 31%;
+  top: 34px;
+}
+
+.divTextCorrect{
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 158px;
+  height: 37px;
+  background-color: #60a500;
+  border-radius: 24px;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 0px 15px;
+  left: 38%;
+  top: 54px;
+}
+
+.divTextFaill{
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 158px;
+  height: 37px;
+  background-color: rgba(212, 0, 0, 0.752);
+  border-radius: 24px;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 0px 15px;
+  left: 38%;
+  top: 54px;
+}
+
+.divTextFinal{
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 316px;
+  height: 59px;
+  background-color: #8ac955;
+  border-radius: 24px;
+  font-size: 46px;
+  font-weight: bold;
+  padding: 0px 0px 8px 31px;
+  left: 34%;
+  top: 252px;
+  color: #e8f832;
 }
