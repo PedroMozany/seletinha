@@ -8,6 +8,7 @@ import { CadProfessorComponent } from './cad-professor/cad-professor.component';
 import { HomePageComponent } from './homePage/homePage.component';
 import { LoginAlunoComponent } from './loginAluno/loginAluno.component';
 import { AlunoComponent } from './aluno/aluno.component';
+import { LocalComponent } from './local/local.component';
 
 const routes: Routes = [{
   path: '',
@@ -39,6 +40,9 @@ const routes: Routes = [{
 },{
   path: 'aluno',
   component: AlunoComponent
+},{
+  path: 'local',
+  component: LocalComponent
 },{
   path: '**',
   redirectTo: '/homepage'

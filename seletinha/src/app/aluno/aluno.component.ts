@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -36,6 +36,7 @@ export class AlunoComponent implements OnInit {
   constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
+    this.questionsQuiz();
   }
 
   btnPlay(){
@@ -178,13 +179,14 @@ export class AlunoComponent implements OnInit {
   }
 
   questionsQuiz(){
-    // const formData = new FormData();
-    // formData.append('nivel', 'facil');
-    // formData.append('tipo', 'Reciclagem' );
-    // formData.append('quantidade', '10' );
-    // this.http.get(url,formData).subscribe((e:any) => {
-    //     console.log(e);
-    // });
+    const url = 'http://localhost:8080/api/ativosDesc'
+    let params = new HttpParams()
+    .set('nivel', 'facil')
+    .set('tipo', 'Reciclagem')
+    .set('quantidade','10');
+    this.http.get(url).subscribe((e:any) => {
+        console.log(e);
+    });
   }
 
 }

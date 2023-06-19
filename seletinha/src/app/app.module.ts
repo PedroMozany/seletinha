@@ -26,6 +26,7 @@ import { LoginAlunoComponent } from './loginAluno/loginAluno.component';
 import { AlunoComponent } from './aluno/aluno.component';
 import {MatDialogModule} from '@angular/material/dialog';
 import { DialogModuleComponent } from './dialog-module/dialog-module.component';
+import { LocalComponent } from './local/local.component';
 
 
 @NgModule({
@@ -40,7 +41,8 @@ import { DialogModuleComponent } from './dialog-module/dialog-module.component';
     HomePageComponent,
     LoginAlunoComponent,
     AlunoComponent,
-    DialogModuleComponent
+    DialogModuleComponent,
+    LocalComponent
    ],
   exports:[],
   imports: [
