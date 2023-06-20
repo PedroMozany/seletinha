@@ -26,11 +26,11 @@
        <span class="nav_name">Dashboard</span> </a>
        <a (click)="telaCad('cad')"  id="cadastro" class="nav_link main-principal"> <i class='bx bx-user nav_icon'></i>
            <span class="nav_name">Cadastro</span> </a>
-           <a (click)="telaAtivi('cad')"  id="atividade" class="nav_link main-principal">
+           <a (click)="telaAtivi('atividade')"  id="atividade" class="nav_link main-principal">
                <i class='bx bx-bar-chart-alt-2 nav_icon'></i>
                <span class="nav_name">Atividade</span> </a>
                        </div>
-      </div> <a  class="nav_link main-principal"> <i class='bx bx-log-out nav_icon'></i> <span class="nav_name">Sair</span> </a>
+      </div> <a (click)="sair()"  class="nav_link main-principal"> <i class='bx bx-log-out nav_icon'></i> <span class="nav_name">Sair</span> </a>
   </nav>
 </div>
 </body>

@@ -179,12 +179,12 @@ export class AlunoComponent implements OnInit {
   }
 
   questionsQuiz(){
-    const url = 'http://localhost:8080/api/ativosDesc'
+    const url = 'http://localhost:8080/api/quiz'
     let params = new HttpParams()
     .set('nivel', 'facil')
     .set('tipo', 'Reciclagem')
     .set('quantidade','10');
-    this.http.get(url).subscribe((e:any) => {
+    this.http.get(url, { params: params }).subscribe((e:any) => {
         console.log(e);
     });
   }

@@ -48,16 +48,6 @@ export class CadAlunoComponent implements OnInit {
     this.turma = e.value;
   }
 
-  trocaTela(e:any){
-    console.log(e)
-    if(this.route.url != "/cadastroAluno"){
-      this.route.navigate(['/cadastroAluno']);
-    }
-  }
-
-  telaCad(e:any){
-    console.log(e)
-  }
 
   ngOnInit(): void {
   }

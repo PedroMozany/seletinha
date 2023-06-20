@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-menu',
@@ -11,20 +12,25 @@ export class MenuComponent implements OnInit {
   @Input() tela!: string;
   @Output() btnMenu = new EventEmitter();
 
-  constructor() {
+  constructor( private route: Router) {
    }
 
 
   ngOnInit(): void {
-    if(this.tela == 'cadastroAluno'){
-      const element = document.getElementById('cadastro');
-      element!.classList.add('active');
-    }
+    // if(this.tela == 'cadastroAluno'){
+    //   const element = document.getElementById('cadastro');
+    //   element!.classList.add('active');
+    // }
 
-    if(this.tela == 'home'){
-      const element = document.getElementById('home');
-      element!.classList.add('active');
-    }
+    // if(this.tela == 'home'){
+    //   const element = document.getElementById('home');
+    //   element!.classList.add('active');
+    // }
+
+    // if(this.tela == 'cadastroAtividade'){
+    //   const element = document.getElementById('atividade');
+    //   element!.classList.add('active');
+    // }
   }
 
   showMenu(){
@@ -45,16 +51,20 @@ export class MenuComponent implements OnInit {
   }
 
   telaHome(e:any){
-    this.btnMenu.emit(e);
+    this.route.navigate(['/home']);
   }
 
   telaCad(e:any){
-    this.btnMenu.emit(e);
+    this.route.navigate(['/cadastroAluno']);
   }
 
   telaAtivi(e:any){
-    this.btnMenu.emit(e);
+    this.route.navigate(['/cadastroAtividade']);
   }
 
+  sair(){
+    localStorage.clear();
+    this.route.navigate(['/homePage']);
+  }
 
 }

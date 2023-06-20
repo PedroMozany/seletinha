@@ -17,6 +17,7 @@ export class CadAtividadeComponent implements OnInit {
   turma!: string;
   serie!: string;
   atividade!: string;
+  tela = 'cadastroAtividade';
   constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
