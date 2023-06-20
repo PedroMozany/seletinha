@@ -13,4 +13,6 @@ public interface TeacherRepository  extends JpaRepository<TeachersModel, Integer
     List<TeachersModel> findAll();
 
     Optional<TeachersModel> findByEmail(String email);
+
+    Optional<TeachersModel> findByRegistry(Integer registry);
 }

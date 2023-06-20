@@ -27,8 +27,7 @@ public class TeachersModel implements UserDetails {
     private String email;
     private String password;
 
-    private Integer team;
-
+    private Integer serie;
     @Enumerated(EnumType.STRING)
     private Role role;
 

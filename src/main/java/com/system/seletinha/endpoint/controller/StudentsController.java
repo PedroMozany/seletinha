@@ -66,4 +66,16 @@ public class StudentsController {
         return new ServiceModel(200, resp);
     }
 
+
+    @RequestMapping(value = "/listStudent", method = RequestMethod.GET)
+    public @ResponseBody String listStudent(final HttpServletRequest request) {
+        final String parameter = request.getParameter("team");
+        final Gson json = new Gson();
+
+        if (parameter != null) {
+            return json.toJson(studentsService.listStudent(parameter));
+        }
+
+        return json.toJson(null);
+    }
 }

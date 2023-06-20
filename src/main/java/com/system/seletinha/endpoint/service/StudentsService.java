@@ -44,4 +44,9 @@ public class StudentsService {
         studentsRepository.deleteById(Integer.valueOf(registry));
         return "SuccessFull";
     }
+
+    public List<StudentModel> listStudent(final String team) {
+        List<StudentModel> list = studentsRepository.findByTeam(Integer.parseInt(team));
+        return list;
+    }
 }

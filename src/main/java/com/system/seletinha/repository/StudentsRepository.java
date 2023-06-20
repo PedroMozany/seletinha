@@ -2,6 +2,7 @@ package com.system.seletinha.repository;
 
 import com.system.seletinha.models.StudentModel;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -19,7 +20,9 @@ public interface StudentsRepository extends JpaRepository<StudentModel, Integer>
 
     void deleteById(int id);
 
+    List<StudentModel> findByTeam(int team);
 
-
+    @Query(value = "select * from student where series = ?1 group by team", nativeQuery = true)
+    List<StudentModel> findBySeries(int series);
 
 }

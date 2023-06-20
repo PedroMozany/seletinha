@@ -26,7 +26,7 @@ public class AuthenticationService {
         var teacher = TeachersModel.builder()
                 .registry(Integer.valueOf(request.getParameter("registry")))
                 .name(request.getParameter("name"))
-                .team(Integer.valueOf(request.getParameter("team")))
+                .serie(Integer.valueOf(request.getParameter("serie")))
                 .email(request.getParameter("email"))
                 .password(passwordEncoder.encode(request.getParameter("password")))
                 .role(Role.USER)
