@@ -9,6 +9,7 @@ import { HomePageComponent } from './homePage/homePage.component';
 import { LoginAlunoComponent } from './loginAluno/loginAluno.component';
 import { AlunoComponent } from './aluno/aluno.component';
 import { LocalComponent } from './local/local.component';
+import { HomeAlunoComponent } from './home-aluno/home-aluno.component';
 
 const routes: Routes = [{
   path: '',
@@ -43,6 +44,9 @@ const routes: Routes = [{
 },{
   path: 'local',
   component: LocalComponent
+},{
+  path: 'homeAluno',
+  component: HomeAlunoComponent
 },{
   path: '**',
   redirectTo: '/homepage'

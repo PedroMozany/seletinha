@@ -1,0 +1,44 @@
+.line{
+  width: 532%;
+  background-color: #777777;
+  height: 2px;
+  top: 12px;
+  position: relative;
+}
+
+
+.div1{
+  font-size: 40px;
+  color: #777777;
+}
+
+.color{
+  color: #777777;
+}
+
+.aling{
+  position: absolute;
+  top: 13%;
+  left: 14%;
+}
+
+.div2{
+  margin-top: 13%;
+    position: relative;
+    left: 14%;
+    width: 86%;
+}
+
+::ng-deep body {
+  background-color:#e8dfcd !important;
+  opacity: 95%;
+}
+
+.lixeira1{
+  background-image: url(./imagens/lixeira.png);
+  background-size: cover;
+  background-position: center;
+  width: 687px;
+  height: 232px;
+  margin-top: 1%;
+}

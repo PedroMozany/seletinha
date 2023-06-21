@@ -72,7 +72,7 @@ export class MenuComponent implements OnInit {
   }
 
   telaHomeAlu(e:any){
-    this.route.navigate(['/home']);
+    this.route.navigate(['/homeAluno']);
   }
 
   telaLocal(e:any){
