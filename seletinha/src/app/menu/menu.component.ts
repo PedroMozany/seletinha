@@ -11,12 +11,21 @@ export class MenuComponent implements OnInit {
   @Input() exibeMenu!: boolean;
   @Input() tela!: string;
   @Output() btnMenu = new EventEmitter();
+  professor:boolean = true;
 
   constructor( private route: Router) {
    }
 
 
   ngOnInit(): void {
+    let tipo = localStorage.getItem('tipo')
+
+    if(tipo == "false"){
+      this.professor = false;
+    }
+    if(tipo == 'true'){
+      this.professor = true;
+    }
     // if(this.tela == 'cadastroAluno'){
     //   const element = document.getElementById('cadastro');
     //   element!.classList.add('active');
@@ -60,6 +69,18 @@ export class MenuComponent implements OnInit {
 
   telaAtivi(e:any){
     this.route.navigate(['/cadastroAtividade']);
+  }
+
+  telaHomeAlu(e:any){
+    this.route.navigate(['/home']);
+  }
+
+  telaLocal(e:any){
+    this.route.navigate(['/local']);
+  }
+
+  telaJogo(e:any){
+    this.route.navigate(['/atividade']);
   }
 
   sair(){

@@ -1,12 +1,47 @@
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 
+
 @Component({
   selector: 'app-aluno',
   templateUrl: './aluno.component.html',
   styleUrls: ['./aluno.component.scss']
 })
 export class AlunoComponent implements OnInit {
+
+  dadosjogo = [{
+    pergunta:"Qual destes materiais é reciclável?",
+    alternativa1: "Papelhigiênico",
+    alternativa2: "Garrafa plástica",
+    alternativa3: "Resto de comida",
+    alternativa4: "Folhas das árvores",
+    resposta: "b"
+  },{
+    pergunta:"Qual a cor do recipiente para descarte de materiais não recicláveis em geral?",
+    alternativa1: "Vermelho",
+    alternativa2: "Verde",
+    alternativa3: "Cinza",
+    alternativa4: "Azul",
+    resposta: "c"
+  },
+  {
+    pergunta:"Qual destes materiais não é reciclável?",
+    alternativa1: "Garrafa de vidro",
+    alternativa2: "Papel",
+    alternativa3: "Lata de alumínio",
+    alternativa4: "Guardanapo sujo",
+    resposta: "d"
+  },
+  {
+    pergunta:"O que devemos fazer com o lixo reciclável?",
+    alternativa1: "Colocar tudo no mesmo saco",
+    alternativa2: "Jogar no lixo comum",
+    alternativa3: "Separar em sacos diferentes conforme o material (papel- plástico- metal)",
+    alternativa4: "Enterrar no quintal",
+    resposta: "c"
+  }]
+
+
 
 
   tela = 'aluno';
@@ -33,6 +68,8 @@ export class AlunoComponent implements OnInit {
 
   jogo2: boolean = false;
   labelPosition!:string;
+  indexjogo:number = 0;
+
   constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
@@ -169,13 +206,14 @@ export class AlunoComponent implements OnInit {
   }
 
 
-  nextQuestion(): void {
-    // this.currentIndex++;
+  proximo(): void {
+    if (this.indexjogo < this.dadosjogo.length - 1) {
+      this.indexjogo++;
+    }
   }
 
-  isLastQuestion(): boolean {
-    return true
-    // return this.currentIndex === this.questions.length - 1;
+  finalizar(): void {
+   //calculo
   }
 
   questionsQuiz(){

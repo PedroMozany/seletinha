@@ -38,7 +38,7 @@ const routes: Routes = [{
   path: 'homepage',
   component: HomePageComponent
 },{
-  path: 'aluno',
+  path: 'atividade',
   component: AlunoComponent
 },{
   path: 'local',
