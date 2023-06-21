@@ -30,6 +30,7 @@ import { LocalComponent } from './local/local.component';
 import { HomeAlunoComponent } from './home-aluno/home-aluno.component';
 import { AlunoDetailsComponent } from './professor/aluno-details/aluno-details.component';
 import {MatRadioModule} from '@angular/material/radio';
+import { ModalAlunoComponent } from './professor/modal-aluno/modal-aluno.component';
 
 
 @NgModule({
@@ -47,7 +48,8 @@ import {MatRadioModule} from '@angular/material/radio';
     DialogModuleComponent,
     LocalComponent,
     HomeAlunoComponent,
-    AlunoDetailsComponent
+    AlunoDetailsComponent,
+    ModalAlunoComponent
    ],
   exports:[],
   imports: [

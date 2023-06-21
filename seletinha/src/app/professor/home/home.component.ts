@@ -43,7 +43,8 @@ export class HomeComponent implements OnInit {
     console.log(this.turma)
   }
 
-  aluno(){
+  aluno(e:any){
+    localStorage.setItem('turma',e);
     this.route.navigate(['/alunoDetails']);
   }
 }

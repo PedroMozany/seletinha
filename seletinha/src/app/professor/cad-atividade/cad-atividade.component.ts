@@ -32,12 +32,16 @@ export class CadAtividadeComponent implements OnInit {
   save(){
 
     if(this.serie != undefined || this.turma != undefined || this.atividade != undefined ){
+      const token = localStorage.getItem('token');
+      const headers = {
+        Authorization: `Bearer ${token}`
+      };
       const url = 'http://localhost:8080/api/atividades';
       const formData = new FormData();
       formData.append('team',  this.turma);
       formData.append('serie',  `${this.serie}`);
       formData.append('nome',  `${this.atividade}`);
-      this.http.post(url,formData).subscribe((e:any) => {
+      this.http.post(url,formData,{headers}).subscribe((e:any) => {
         return window.alert("Cadastro realizado com sucesso");
       });
       return;

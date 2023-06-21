@@ -7,10 +7,12 @@
   </div>
 
 
-  <div (click)="aluno()" class="div1" *ngFor="let element of turma.listTurma">
-    <div  class="div2">
-      <div style="font-weight: bold;"> Turma:</div>
-      <div class="ajustdiv1"> {{ element.team }}</div>
+  <div  class="div1" *ngFor="let element of turma.listTurma">
+    <div (click)="aluno(element.team)">
+      <div class="div2">
+        <div style="font-weight: bold;"> Turma:</div>
+        <div class="ajustdiv1"> {{ element.team }}</div>
+      </div>
     </div>
   </div>
 
