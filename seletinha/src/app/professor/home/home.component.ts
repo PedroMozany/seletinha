@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -7,11 +8,42 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  tela = 'home';
+   dados = [{
+    "nameteacher": "oi",
+    "registryTeacher": 335,
+    "listTurma":[
+      {
+        "team": 19
+      },
+       {
+        "team": 18
+      },
+       {
+        "team": 17
+      },
+       {
+        "team": 1
+      },
+       {
+        "team": 12
+      },
+       {
+        "team": 13
+      }
+    ]
+  }]
 
-  constructor() { }
+  tela = 'home';
+  turma!:any;
+
+  constructor( private route: Router) { }
 
   ngOnInit(): void {
+    this.turma = this.dados[0];
+    console.log(this.turma)
   }
 
+  aluno(){
+    this.route.navigate(['/alunoDetails']);
+  }
 }

@@ -91,26 +91,19 @@
     </div>
 
   </div>
-
   <div class="container2 quiz-container" *ngIf="jogo2">
-    <div *ngFor="let jogo of dadosjogo; let last = last">
-      <div class="question">{{ jogo.pergunta }}</div>
-      <div>
-        <mat-radio-group class="options" [(ngModel)]="jogo.resposta">
-          <mat-radio-button class="example-margin" value="a">{{ jogo.alternativa1 }}</mat-radio-button>
-          <mat-radio-button class="example-margin" value="b">{{ jogo.alternativa2 }}</mat-radio-button>
-          <mat-radio-button class="example-margin" value="c">{{ jogo.alternativa3 }}</mat-radio-button>
-          <mat-radio-button class="example-margin" value="d">{{ jogo.alternativa4 }}</mat-radio-button>
-        </mat-radio-group>
-      </div>
-      <div class="button-container">
-        <button *ngIf="!last" (click)="proximo()">Próximo</button>
-      <button *ngIf="last" (click)="finalizar()">Finalizar</button>
-      </div>
-
+    <div class="question">{{ dadosjogo[indexjogo].pergunta }}</div>
+    <div>
+      <mat-radio-group class="options" >
+        <mat-radio-button class="example-margin" value="a">{{ dadosjogo[indexjogo].alternativa1 }}</mat-radio-button>
+        <mat-radio-button class="example-margin" value="b">{{ dadosjogo[indexjogo].alternativa2 }}</mat-radio-button>
+        <mat-radio-button class="example-margin" value="c">{{ dadosjogo[indexjogo].alternativa3 }}</mat-radio-button>
+        <mat-radio-button class="example-margin" value="d">{{ dadosjogo[indexjogo].alternativa4 }}</mat-radio-button>
+      </mat-radio-group>
     </div>
-
-
+    <div class="button-container">
+      <button (click)="proximo()" >Próxima</button>
+    </div>
   </div>
 
 </div>

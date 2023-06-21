@@ -3,14 +3,14 @@
 <div class="aling">
 
   <div class="div4">
-    <span>Turmas cadastradas</span>
+    <span>Alunos cadastrados</span>
   </div>
 
 
-  <div (click)="aluno()" class="div1" *ngFor="let element of turma.listTurma">
-    <div  class="div2">
-      <div style="font-weight: bold;"> Turma:</div>
-      <div class="ajustdiv1"> {{ element.team }}</div>
+  <div class="div1" *ngFor="let element of turma.listTurma">
+    <div class="div2">
+      <!-- <div style="font-weight: bold;"> Turma:</div>
+      <div class="ajustdiv1"> {{ element.team }}</div> -->
     </div>
   </div>
 

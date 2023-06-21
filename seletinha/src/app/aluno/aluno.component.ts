@@ -1,6 +1,15 @@
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 
+interface Pergunta {
+  pergunta: string;
+  alternativa1: string;
+  alternativa2: string;
+  alternativa3: string;
+  alternativa4: string;
+  resposta: string;
+}
+
 
 @Component({
   selector: 'app-aluno',
@@ -9,7 +18,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AlunoComponent implements OnInit {
 
-  dadosjogo = [{
+  dadosjogo: Pergunta[] = [{
     pergunta:"Qual destes materiais é reciclável?",
     alternativa1: "Papelhigiênico",
     alternativa2: "Garrafa plástica",
@@ -48,9 +57,9 @@ export class AlunoComponent implements OnInit {
   pulsate: boolean = true;
   pontos:number = 0;
 
-  jogo1: boolean = false;
+  jogo1: boolean = true;
   lixeira: boolean = false;
-  play: boolean = false;
+  play: boolean = true;
   fraseFinal: boolean = false;
   frase: boolean = false;
   fraseCorrect: boolean = false;

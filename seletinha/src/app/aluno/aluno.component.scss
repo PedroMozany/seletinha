@@ -297,3 +297,62 @@
 .button:hover {
   background-color: #3071a9;
 }
+
+.container2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 352px;
+}
+
+.quiz-container {
+  width: 687px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 17px;
+  background-color: #f9f9f9;
+}
+
+.question {
+  text-align: center;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.example-margin {
+  margin-bottom: 10px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 17px;
+  background-color: #194313;
+  color: #fff;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+::ng-deep .mat-radio-button.mat-accent .mat-radio-inner-circle, .mat-radio-button.mat-accent .mat-radio-ripple .mat-ripple-element:not(.mat-radio-persistent-ripple), .mat-radio-button.mat-accent.mat-radio-checked .mat-radio-persistent-ripple, .mat-radio-button.mat-accent:active .mat-radio-persistent-ripple {
+  background-color: #1a4514 !important;
+}
+
+::ng-deep .mat-radio-button.mat-accent.mat-radio-checked .mat-radio-outer-circle {
+  border-color: #1a4514 !important;
+}

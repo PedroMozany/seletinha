@@ -28,6 +28,8 @@ import {MatDialogModule} from '@angular/material/dialog';
 import { DialogModuleComponent } from './dialog-module/dialog-module.component';
 import { LocalComponent } from './local/local.component';
 import { HomeAlunoComponent } from './home-aluno/home-aluno.component';
+import { AlunoDetailsComponent } from './professor/aluno-details/aluno-details.component';
+import {MatRadioModule} from '@angular/material/radio';
 
 
 @NgModule({
@@ -44,7 +46,8 @@ import { HomeAlunoComponent } from './home-aluno/home-aluno.component';
     AlunoComponent,
     DialogModuleComponent,
     LocalComponent,
-    HomeAlunoComponent
+    HomeAlunoComponent,
+    AlunoDetailsComponent
    ],
   exports:[],
   imports: [
@@ -63,7 +66,8 @@ import { HomeAlunoComponent } from './home-aluno/home-aluno.component';
     MatChipsModule,
     HttpClientModule,
     MatTabsModule,
-    MatDialogModule
+    MatDialogModule,
+    MatRadioModule
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [],

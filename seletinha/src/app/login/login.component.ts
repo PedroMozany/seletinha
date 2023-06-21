@@ -32,12 +32,13 @@ export class LoginComponent implements OnInit {
 
   login(){
  if(this.senha != undefined ){
-      const url = 'http://localhost:4200/api/auth/login';
+      const url = 'http://localhost:8080/api/auth/login';
       const formData = new FormData();
       formData.append('email',  `${this.emailFormControl.value}`);
       formData.append('password',  `${this.senha}`);
       this.http.post(url,formData).subscribe((e:any) => {
         localStorage.setItem('token', e.token);
+        localStorage.setItem('tipo','true')
         this.router.navigate(['/home']);
       });
       return;

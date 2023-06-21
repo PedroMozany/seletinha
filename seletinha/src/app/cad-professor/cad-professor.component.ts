@@ -35,12 +35,12 @@ export class CadProfessorComponent implements OnInit {
 
   cadastro(){
     if(this.nome != undefined || this.turma != undefined || this.idprofessor != undefined || this.senha != undefined ){
-      const url = 'http://localhost:4200/api/auth/signup';
+      const url = 'http://localhost:8080/api/auth/signup';
       const formData = new FormData();
       formData.append('name',  this.nome);
       formData.append('email',  `${this.emailFormControl.value}`);
       formData.append('password',  `${this.senha}`);
-      formData.append('team',  `${this.turma}`);
+      formData.append('serie',  `${this.turma}`);
       formData.append('registry',  `${this.idprofessor}`);
       this.http.post(url,formData).subscribe((e:any) => {
         this.openDialog(this.nome);

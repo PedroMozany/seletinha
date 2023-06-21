@@ -40,14 +40,10 @@
       </div>
 
       <div>
-       <mat-form-field  class="editMatTur" appearance="outline">
-        <mat-label>Turma</mat-label>
-        <mat-select (selectionChange)="selectTurma($event)">
-          <mat-option value="1">A</mat-option>
-          <mat-option value="2">B</mat-option>
-          <mat-option value="3">C</mat-option>
-        </mat-select>
-       </mat-form-field>
+        <mat-form-field  class="editMatTur" appearance="outline">
+          <mat-label>Turma</mat-label>
+          <input matInput [(ngModel)]="turma" >
+        </mat-form-field>
       </div>
     </div>
 
