@@ -27,7 +27,7 @@ public class TeacherService {
 
     public DdosTeams searchTeam(final String registry) {
         List<TeamModel> teams = new LinkedList<>();
-        Optional<TeachersModel> teacher = teacherRepository.findByRegistry(Integer.valueOf(registry));
+        Optional<TeachersModel> teacher = teacherRepository.findByRegistry(Integer.parseInt(registry));
         TeachersModel teachersModel = teacher.get();
         List<StudentModel> students = studentsRepository.findBySeries(teachersModel.getSerie());
         for(StudentModel studentModel : students){
